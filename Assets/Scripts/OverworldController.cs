@@ -1,12 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class OverworldController : MonoBehaviour {
     float speed = 0.1f;
 
+    public TaskController taskController;
+
+    private Vector3 initial;
+
     // Start is called before the first frame update
     void Start() {
+        taskController.ui.OnClose += TaskUIClosed;
+        initial = this.transform.position;
+    }
+
+    private void TaskUIClosed() {
+        speed = 0.1f;
+        this.transform.position = initial;
     }
 
     // Update is called once per frame
@@ -34,6 +46,7 @@ public class OverworldController : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        TaskUI obj = Instantiate(new TaskUI()) as TaskUI;
+        taskController.ui.display();
+        speed = 0;
     }
 }
