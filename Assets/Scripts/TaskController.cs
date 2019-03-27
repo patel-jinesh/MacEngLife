@@ -24,6 +24,7 @@ public class TaskController : MonoBehaviour {
             Vector3 pos = go.transform.position;
             pos.x = 0;
             go.transform.position = pos;
+            go.GetComponent<Button>().enabled = false;
         }
     }
 
