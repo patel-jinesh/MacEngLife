@@ -8,10 +8,10 @@ public class CharacterSelectionUI : MonoBehaviour {
 
     public CharacterSelectionUI() {
         index = -1;
-    }
+    } 
 
     public void Start() {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
 
     public void close() {
