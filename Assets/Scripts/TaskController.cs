@@ -18,8 +18,9 @@ public class TaskController : MonoBehaviour {
         foreach (Task task in ti.getAll()) {
             GameObject go = Instantiate(tmpltTask) as GameObject;
             go.SetActive(true);
-            Text t = go.GetComponentInChildren<Text>();
-            t.text = task.name;
+            Text[] t = go.GetComponentsInChildren<Text>();
+            t[0].text = task.name;
+            t[1].text = task.description;
             go.transform.SetParent(tmpltTask.transform.parent);
             Vector3 pos = go.transform.position;
             pos.x = 0;
