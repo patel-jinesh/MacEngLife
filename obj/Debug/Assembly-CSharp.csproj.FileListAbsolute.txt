@@ -1,0 +1,2 @@
+/Users/jinesh/Documents/University/Year III/SFWRENG 3A04/MacEngLife/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/jinesh/Documents/University/Year III/SFWRENG 3A04/MacEngLife/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
