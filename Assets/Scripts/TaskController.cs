@@ -22,15 +22,7 @@ public class TaskController : MonoBehaviour {
             t[0].text = task.name;
             t[1].text = task.description;
             go.transform.SetParent(tmpltTask.transform.parent);
-            Vector3 pos = go.transform.position;
-            pos.x = 0;
-            go.transform.position = pos;
             go.GetComponent<Button>().enabled = false;
         }
-    }
-
-    // Update is called once per frame
-    void Update() {
-
     }
 }

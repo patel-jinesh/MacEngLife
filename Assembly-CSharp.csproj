@@ -61,7 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CharacterInfo.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectionController.cs" />
+    <Compile Include="Assets\Scripts\CharacterSelectionUI.cs" />
+    <Compile Include="Assets\Scripts\Model.cs" />
     <Compile Include="Assets\Scripts\OverworldController.cs" />
     <Compile Include="Assets\Scripts\PlayerStatsInfo.cs" />
     <Compile Include="Assets\Scripts\StatsController.cs" />
@@ -73,6 +76,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Scripts\models.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />

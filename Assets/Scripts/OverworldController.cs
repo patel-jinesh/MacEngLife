@@ -7,18 +7,28 @@ public class OverworldController : MonoBehaviour {
     float speed = 0.1f;
 
     public TaskController taskController;
+    public CharacterSelectionController characterSelectionController;
 
     private Vector3 initial;
 
     // Start is called before the first frame update
     void Start() {
         taskController.ui.OnClose += TaskUIClosed;
+        characterSelectionController.ui.display();
         initial = this.transform.position;
     }
 
     private void TaskUIClosed() {
         speed = 0.1f;
         this.transform.position = initial;
+    }
+
+    public void setMultipliers(float xp, float intel, float health) {
+        Debug.Log(xp);
+    }
+
+    public void setStats(int xp, int intel, int health) {
+
     }
 
     // Update is called once per frame
