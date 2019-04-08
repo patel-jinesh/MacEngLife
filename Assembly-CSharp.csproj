@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\CharacterInfo.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectionController.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectionUI.cs" />
+    <Compile Include="Assets\Scripts\EndGameUI.cs" />
     <Compile Include="Assets\Scripts\Job.cs" />
     <Compile Include="Assets\Scripts\JobController.cs" />
     <Compile Include="Assets\Scripts\JobInfo.cs" />

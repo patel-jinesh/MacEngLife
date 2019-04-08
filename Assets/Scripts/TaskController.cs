@@ -23,9 +23,47 @@ public class TaskController : MonoBehaviour {
             t[1].text = task.description;
             go.transform.SetParent(tmpltTask.transform.parent);
             go.GetComponent<Button>().enabled = false;
+
+            if (task.completed) {
+                go.GetComponent<Button>().enabled = false;
+                Texture2D tex = Resources.Load<Texture2D>("Controls/itemcomp") as Texture2D;
+                Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 857, 92), new Vector2(0.5f, 0.5f));
+                go.GetComponent<Image>().sprite = sprite;
+            } else {
+                go.GetComponent<Button>().enabled = true;
+                go.GetComponent<Button>().onClick.AddListener(() => { /*Minigame stuff*/ });
+            }
         }
 
         ui.OnClose += () => { OnClose?.Invoke(); };
+    }
+
+    public void display() {
+        ui.display();
+    }
+
+    public void wipe() {
+        ti.wipe();
+
+        foreach (Task task in ti.getAll()) {
+            GameObject go = Instantiate(tmpltTask) as GameObject;
+            go.SetActive(true);
+            Text[] t = go.GetComponentsInChildren<Text>();
+            t[0].text = task.name;
+            t[1].text = task.description;
+            go.transform.SetParent(tmpltTask.transform.parent);
+            go.GetComponent<Button>().enabled = false;
+
+            if (task.completed) {
+                go.GetComponent<Button>().enabled = false;
+                Texture2D tex = Resources.Load<Texture2D>("Controls/itemcomp") as Texture2D;
+                Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 857, 92), new Vector2(0.5f, 0.5f));
+                go.GetComponent<Image>().sprite = sprite;
+            } else {
+                go.GetComponent<Button>().enabled = true;
+                go.GetComponent<Button>().onClick.AddListener(() => { /*Minigame stuff*/ });
+            }
+        }
     }
 
     public delegate void GUI();

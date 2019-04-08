@@ -1,5 +1,5 @@
 Job1|d1|study|nc|y|5
-Job2|d2|work a lot|c|n|6
-Job3|d3|work a little|c|n|9
-Job4|d4|sleep|c|n|2
-Job5|d5|write a test|c|n|4
+Job2|d2|work a lot|nc|n|6
+Job3|d3|work a little|nc|y|9
+Job4|d4|sleep|nc|y|0
+Job5|d5|write a test|nc|n|4

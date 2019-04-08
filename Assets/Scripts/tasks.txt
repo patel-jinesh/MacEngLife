@@ -1,5 +1,5 @@
 Task1|d1|study|nc|5
-Task2|d2|work a lot|c|8
-Task3|d3|work a little|c|3
-Task4|d4|sleep|c|2
-Task5|d5|write a test|c|10
+Task2|d2|work a lot|nc|8
+Task3|d3|work a little|nc|3
+Task4|d4|sleep|nc|2
+Task5|d5|write a test|nc|10

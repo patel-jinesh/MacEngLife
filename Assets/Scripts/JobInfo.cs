@@ -43,4 +43,8 @@ public class JobInfo {
         lines[id] = lines[id].Replace("|nc|", "|c|");
         File.WriteAllLines(path, lines);
     }
+
+    public void wipe() {
+        File.WriteAllText(path, File.ReadAllText(path).Replace("|c|", "|nc|"));
+    }
 }

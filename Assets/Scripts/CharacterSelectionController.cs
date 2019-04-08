@@ -48,6 +48,9 @@ public class CharacterSelectionController : MonoBehaviour {
         OnClose?.Invoke();
     }
 
+    public void display() {
+        ui.display();
+    }
 
     public delegate void GUI();
     public event GUI OnClose;
