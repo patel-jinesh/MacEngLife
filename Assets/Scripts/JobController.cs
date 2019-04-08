@@ -8,6 +8,7 @@ public class JobController : MonoBehaviour
     public JobUI ui;
     public JobInfo ji;
     public GameObject tmpltJob;
+    public GameObject list;
 
     // Start is called before the first frame update
     void Start() {
@@ -42,6 +43,11 @@ public class JobController : MonoBehaviour
 
     public void wipe() {
         ji.wipe();
+
+        foreach (Button btn in list.GetComponentsInChildren<Button>()) {
+            Destroy(btn.gameObject);
+        }
+
         Start();
     }
 
