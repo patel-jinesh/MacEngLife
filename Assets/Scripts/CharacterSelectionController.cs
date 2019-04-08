@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterSelectionController : MonoBehaviour {
+    public OverworldController ovc;
     public CharacterSelectionUI ui;
     public CharacterInfo ci;
     public GameObject tmpltCharacter;
-    public OverworldController ovc;
 
     // Start is called before the first frame update
     void Start() {
@@ -39,5 +40,10 @@ public class CharacterSelectionController : MonoBehaviour {
         Model m = ci.getModel(id);
         ovc.setStats(m.baseExperience, m.baseIntelligence, m.baseHealth);
         ovc.setMultipliers(m.experienceMultiplier, m.intelligenceMultiplier, m.healthMultiplier);
+        Debug.Log("Copie");
+        File.WriteAllBytes("Assets/Resources/CharacterImages/player.png",File.ReadAllBytes("Assets/Resources/CharacterImages/" + m.name + ".png"));
+        Texture2D tex = Resources.Load<Texture2D>("CharacterImages/" + m.name) as Texture2D;
+        Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 32, 64), new Vector2(0.5f, 0.5f));
+        ovc.gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
     }
 }

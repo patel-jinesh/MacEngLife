@@ -2,20 +2,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class OverworldController : MonoBehaviour {
     float speed = 0.1f;
 
     public TaskController taskController;
     public CharacterSelectionController characterSelectionController;
+    public StatsController statsController;
 
     private Vector3 initial;
 
     // Start is called before the first frame update
     void Start() {
         taskController.ui.OnClose += TaskUIClosed;
-        characterSelectionController.ui.display();
         initial = this.transform.position;
+
+        if (!File.Exists("Assets/Scripts/player.txt")) {
+            characterSelectionController.ui.display();
+        }
     }
 
     private void TaskUIClosed() {
@@ -24,11 +29,15 @@ public class OverworldController : MonoBehaviour {
     }
 
     public void setMultipliers(float xp, float intel, float health) {
-        Debug.Log(xp);
+        statsController.setMultipliers(xp, intel, health);
     }
 
     public void setStats(int xp, int intel, int health) {
+        statsController.setStats(xp, intel, health);
+    }
 
+    public void updateStats(float mul, int xp, int intel, int health) {
+        statsController.updateStats(mul, xp, intel, health);
     }
 
     // Update is called once per frame
