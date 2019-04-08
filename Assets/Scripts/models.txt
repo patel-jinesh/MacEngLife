@@ -1,3 +1,4 @@
-﻿Gangsta|Boi|1.5|1.5|1.5|2|2|3
-Gangsta|Boi|1.5|1.5|1.5|2|2|3
-stickman|Boi|2.5|1.5|1.5|2|2|3
+﻿Joker|Boi|1.5|1.5|1.5|3|3|3
+Sleeper|Boi|1.0|1.5|2.0|3|2|3
+Worker|Boi|1.5|2.0|1.0|2|3|3
+Runner|Boi|2.0|1.0|1.5|4|2|1

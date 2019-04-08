@@ -1,3 +1,5 @@
-t1|d1|study|nc|5
-t2|d2|work|c|8
-t3|d3|work|c|2
+Task1|d1|study|nc|5
+Task2|d2|work a lot|c|8
+Task3|d3|work a little|c|3
+Task4|d4|sleep|c|2
+Task5|d5|write a test|c|10
