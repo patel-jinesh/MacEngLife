@@ -8,7 +8,6 @@ public class JobController : MonoBehaviour
     public JobUI ui;
     public JobInfo ji;
     public GameObject tmpltJob;
-    public GameObject tmpltJob;
 
     // Start is called before the first frame update
     void Start() {
