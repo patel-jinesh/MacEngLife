@@ -45,5 +45,10 @@ public class CharacterSelectionController : MonoBehaviour {
         Texture2D tex = Resources.Load<Texture2D>("CharacterImages/" + m.name) as Texture2D;
         Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 32, 64), new Vector2(0.5f, 0.5f));
         ovc.gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        OnClose?.Invoke();
     }
+
+
+    public delegate void GUI();
+    public event GUI OnClose;
 }

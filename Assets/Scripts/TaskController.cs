@@ -24,5 +24,10 @@ public class TaskController : MonoBehaviour {
             go.transform.SetParent(tmpltTask.transform.parent);
             go.GetComponent<Button>().enabled = false;
         }
+
+        ui.OnClose += () => { OnClose?.Invoke(); };
     }
+
+    public delegate void GUI();
+    public event GUI OnClose;
 }

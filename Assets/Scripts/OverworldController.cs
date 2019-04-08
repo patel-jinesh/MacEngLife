@@ -15,15 +15,17 @@ public class OverworldController : MonoBehaviour {
 
     // Start is called before the first frame update
     void Start() {
-        taskController.ui.OnClose += TaskUIClosed;
+        taskController.OnClose += UIClosed;
+        characterSelectionController.OnClose += UIClosed;
         initial = this.transform.position;
 
         if (!File.Exists("Assets/Scripts/player.txt")) {
             characterSelectionController.ui.display();
+            speed = 0;
         }
     }
 
-    private void TaskUIClosed() {
+    private void UIClosed() {
         speed = 0.1f;
         this.transform.position = initial;
     }
