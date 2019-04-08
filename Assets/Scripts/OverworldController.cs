@@ -8,6 +8,7 @@ public class OverworldController : MonoBehaviour {
     float speed = 0.1f;
 
     public TaskController taskController;
+    public JobController jobController;
     public CharacterSelectionController characterSelectionController;
     public StatsController statsController;
 
@@ -16,6 +17,7 @@ public class OverworldController : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         taskController.OnClose += UIClosed;
+        jobController.OnClose += UIClosed;
         characterSelectionController.OnClose += UIClosed;
         initial = this.transform.position;
 
@@ -40,6 +42,10 @@ public class OverworldController : MonoBehaviour {
 
     public void updateStats(float mul, int xp, int intel, int health) {
         statsController.updateStats(mul, xp, intel, health);
+    }
+
+    public PlayerStatsInfo getStats() {
+        return statsController.getStats();
     }
 
     // Update is called once per frame
@@ -67,7 +73,7 @@ public class OverworldController : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        taskController.ui.display();
+        jobController.ui.display();
         speed = 0;
     }
 }

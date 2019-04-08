@@ -64,6 +64,10 @@
     <Compile Include="Assets\Scripts\CharacterInfo.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectionController.cs" />
     <Compile Include="Assets\Scripts\CharacterSelectionUI.cs" />
+    <Compile Include="Assets\Scripts\Job.cs" />
+    <Compile Include="Assets\Scripts\JobController.cs" />
+    <Compile Include="Assets\Scripts\JobInfo.cs" />
+    <Compile Include="Assets\Scripts\JobUI.cs" />
     <Compile Include="Assets\Scripts\Model.cs" />
     <Compile Include="Assets\Scripts\OverworldController.cs" />
     <Compile Include="Assets\Scripts\PlayerStatsInfo.cs" />
@@ -72,6 +76,7 @@
     <Compile Include="Assets\Scripts\TaskController.cs" />
     <Compile Include="Assets\Scripts\TaskInfo.cs" />
     <Compile Include="Assets\Scripts\TaskUI.cs" />
+    <None Include="Assets\Scripts\jobs.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
