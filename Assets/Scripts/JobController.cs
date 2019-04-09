@@ -24,7 +24,7 @@ public class JobController : MonoBehaviour
             go.SetActive(true);
             Text[] t = go.GetComponentsInChildren<Text>();
             t[0].text = job.name;
-            t[1].text = job.description;
+            t[1].text = job.description + $"\nXP Gain: { job.xp }";
             go.transform.SetParent(tmpltJob.transform.parent);
 
             if (job.completed) {
@@ -58,6 +58,7 @@ public class JobController : MonoBehaviour
     public void apply(int id) {
         PlayerStatsInfo info = this.gameObject.GetComponent<OverworldController>().getStats();
         Job j = ji.getJob(id);
+
         if (j.criteria < info.experience + info.intelligence) {
             ji.setDone(id);
             GameObject tl = GameObject.Find("JobsList");
@@ -66,6 +67,9 @@ public class JobController : MonoBehaviour
             Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 857, 92), new Vector2(0.5f, 0.5f));
             tl.GetComponentsInChildren<Button>()[id].gameObject.GetComponent<Image>().sprite = sprite;
             StartCoroutine(ui.displayDone());
+
+            this.gameObject.GetComponent<OverworldController>().updateStats(1, j.xp, 0, 0);
+
             if (j.isEndGameJob) {
                 this.gameObject.GetComponent<OverworldController>().setEndgame();
             }

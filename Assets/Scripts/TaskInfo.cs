@@ -22,6 +22,9 @@ public class TaskInfo {
             task.type = data[2];
             task.completed = data[3] == "c";
             task.difficulty = int.Parse(data[4]);
+            task.intel = int.Parse(data[5]);
+            task.xp = int.Parse(data[6]);
+            task.health = int.Parse(data[7]);
 
             tasks.Add(task);
         }

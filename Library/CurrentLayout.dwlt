@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 583, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 67
+  controlID: 75
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 68
+  controlID: 76
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -243,7 +243,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 69
+  controlID: 77
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -302,9 +302,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 390.4011, y: 382.16785, z: -5.277777}
+    m_Target: {x: 522.20996, y: 343.16025, z: 12.649117}
     speed: 2
-    m_Value: {x: 390.4011, y: 382.16785, z: -5.277777}
+    m_Value: {x: 522.20996, y: 343.16025, z: 12.649117}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -336,9 +336,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 823.6142
+    m_Target: 846.0731
     speed: 2
-    m_Value: 823.6142
+    m_Value: 846.0731
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -388,20 +388,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/jinesh/Documents/University/Year III/SFWRENG 3A04/MacEngLife
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 52270000
-    m_LastClickedID: 10066
-    m_ExpandedIDs: 0000000040260000ba2600003827000052270000b227000000ca9a3b
+    m_SelectedIDs: 300c0000
+    m_LastClickedID: 3120
+    m_ExpandedIDs: 00000000b0090000420a0000d40a0000ec0a0000ee0a0000600b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -417,7 +417,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -429,7 +429,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000040260000ba2600003827000052270000b2270000
+    m_ExpandedIDs: 00000000b0090000420a0000d40a0000ec0a0000ee0a0000600b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,9 +548,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 84070000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ccfbffffe428000012290000ac290000b8290000122a0000
+      m_ExpandedIDs: b276ffffe677ffffe07bffffc07cfffff280fffff682ffff2284ffff0287ffff329bffff3e9bfffffee7ffff50e9ffff56ebffff06ecffff68efffff82efffffd6fbffff020d0000740d0000b40d0000440e0000960e0000123f00009291000098b50000ccb60000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.UI;
 
 public class OverworldController : MonoBehaviour {
     float speed = 0.1f;
@@ -14,12 +15,19 @@ public class OverworldController : MonoBehaviour {
     public StatsController statsController;
 
     public EndGameUI endGameUI;
+    public PlayerOverviewUI overviewUI;
+    public InstructionsUI instructionsUI;
+
+    public Text overview;
+    public Image avatar;
 
     private Vector3 initial;
 
     // Start is called before the first frame update
     void Start() {
         taskController.OnClose += UIClosed;
+        overviewUI.OnClose += UIClosed;
+        instructionsUI.OnClose += UIClosed;
         jobController.OnClose += JobUIClosed;
         characterSelectionController.OnClose += UIClosed;
         initial = this.transform.position;
@@ -48,6 +56,19 @@ public class OverworldController : MonoBehaviour {
         }
     }
 
+    public void openPlayerOverviewUI() {
+        speed = 0f;
+        PlayerStatsInfo stat = getStats();
+        overview.text = "Intelligence: " + stat.intelligence.ToString() + "\nExperience: " + stat.experience.ToString() + "\nHealth: " + stat.health.ToString();
+        avatar.sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+        overviewUI.display();
+    }
+
+    public void openInstructionsUI() {
+        speed = 0f;
+        instructionsUI.display();
+    }
+
     public void wipe() {
         File.Delete("Assets/Scripts/player.txt");
 
@@ -59,15 +80,15 @@ public class OverworldController : MonoBehaviour {
     }
 
     public void setMultipliers(float xp, float intel, float health) {
-        statsController.setMultipliers(xp, intel, health);
+        statsController.setMultipliers(intel, xp, health);
     }
 
     public void setStats(int xp, int intel, int health) {
-        statsController.setStats(xp, intel, health);
+        statsController.setStats(intel, xp, health);
     }
 
     public void updateStats(float mul, int xp, int intel, int health) {
-        statsController.updateStats(mul, xp, intel, health);
+        statsController.updateStats(mul, intel, xp, health);
     }
 
     public PlayerStatsInfo getStats() {
@@ -99,8 +120,11 @@ public class OverworldController : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        // Job or Task
-        jobController.display();
+        if (collision.gameObject.name == "Task") {
+            taskController.display(collision.gameObject.tag);
+        } else {
+            jobController.display();
+        }
         speed = 0;
     }
 }

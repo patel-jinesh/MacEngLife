@@ -19,7 +19,7 @@ public class JobInfo {
             Job job = new Job();
             job.name = data[0];
             job.description = data[1];
-            job.type = data[2];
+            job.xp = int.Parse(data[2]);
             job.completed = data[3] == "c";
             job.isEndGameJob = data[4] == "y";
             job.criteria = int.Parse(data[5]);

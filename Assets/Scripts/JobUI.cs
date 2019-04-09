@@ -22,14 +22,14 @@ public class JobUI : MonoBehaviour
     public IEnumerator displayDone() {
         Image i = this.gameObject.GetComponent<Image>();
         i.color = Color.green;
-        yield return new WaitForSeconds(3f); // waits 3 seconds
+        yield return new WaitForSeconds(1f); // waits 1 seconds
         i.color = Color.white; // will make the update method pick up 
     }
 
     public IEnumerator displayIncomplete() {
         Image i = this.gameObject.GetComponent<Image>();
         i.color = Color.red;
-        yield return new WaitForSeconds(3f); // waits 3 seconds
+        yield return new WaitForSeconds(1f); // waits 1 seconds
         i.color = Color.white; // will make the update method pick up 
     }
 

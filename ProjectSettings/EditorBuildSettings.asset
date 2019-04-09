@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Overworld.unity
+    guid: 262b92e7048fb4f0e8a2087056ed5bbc
+  - enabled: 1
+    path: Assets/Scenes/TicTacToe.unity
+    guid: 89e08f0667ceb4af295d7b40ecccc937
+  - enabled: 1
+    path: Assets/Scenes/Snake.unity
+    guid: 8e5d2e23026a747e2a2ab4986c21f016
+  - enabled: 1
+    path: Assets/Scenes/Pong.unity
+    guid: 8e858c0f90b0b47e690ed2f0a35058a9
   m_configObjects: {}
