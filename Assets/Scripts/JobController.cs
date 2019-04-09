@@ -70,6 +70,8 @@ public class JobController : MonoBehaviour
 
             this.gameObject.GetComponent<OverworldController>().updateStats(1, j.xp, 0, 0);
 
+            Debug.Log(id);
+            Debug.Log(j.isEndGameJob);
             if (j.isEndGameJob) {
                 this.gameObject.GetComponent<OverworldController>().setEndgame();
             }

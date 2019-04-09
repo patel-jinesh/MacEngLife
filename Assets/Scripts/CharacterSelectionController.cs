@@ -9,6 +9,7 @@ public class CharacterSelectionController : MonoBehaviour {
     public CharacterSelectionUI ui;
     public CharacterInfo ci;
     public GameObject tmpltCharacter;
+    public GameObject list;
 
     // Start is called before the first frame update
     void Start() {
@@ -49,6 +50,29 @@ public class CharacterSelectionController : MonoBehaviour {
 
     public void display() {
         ui.display();
+
+        ci = new CharacterInfo();
+
+        foreach(Button b in list.GetComponentsInChildren<Button>()) {
+            Destroy(b.gameObject);
+        }
+
+        for (int idx = 0; idx < ci.getAll().Count; idx++) {
+            int index = idx;
+            Model model = ci.getModel(idx);
+            GameObject go = Instantiate(tmpltCharacter) as GameObject;
+            go.SetActive(true);
+            Text[] t = go.GetComponentsInChildren<Text>();
+            Image[] i = go.GetComponentsInChildren<Image>();
+            t[0].text = model.name;
+            t[1].text = model.description + "\n" + model.experienceMultiplier.ToString() + "\n" + model.intelligenceMultiplier.ToString() + "\n" + model.healthMultiplier.ToString() + "\n" + model.baseExperience.ToString() + "\n" + model.baseIntelligence.ToString() + "\n" + model.baseHealth.ToString();
+            Texture2D tex = Resources.Load<Texture2D>("CharacterImages/" + model.name) as Texture2D;
+            Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 32, 64), new Vector2(0.5f, 0.5f));
+            i[1].sprite = sprite;
+            go.transform.SetParent(tmpltCharacter.transform.parent);
+            go.GetComponent<Button>().enabled = true;
+            go.GetComponent<Button>().onClick.AddListener(() => ui.Select(index));
+        }
     }
 
     public delegate void GUI();

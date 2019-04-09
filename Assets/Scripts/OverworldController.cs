@@ -71,6 +71,7 @@ public class OverworldController : MonoBehaviour {
 
     public void wipe() {
         File.Delete("Assets/Scripts/player.txt");
+        endgame = false;
 
         taskController.wipe();
         jobController.wipe();

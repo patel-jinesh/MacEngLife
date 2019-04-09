@@ -2913,6 +2913,7 @@ MonoBehaviour:
   ovc: {fileID: 984348345}
   ui: {fileID: 1483642814}
   tmpltCharacter: {fileID: 1396419059}
+  list: {fileID: 1917329075}
 --- !u!114 &984348350
 MonoBehaviour:
   m_ObjectHideFlags: 0
