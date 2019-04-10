@@ -61,9 +61,17 @@ public class TaskController : MonoBehaviour {
                             ti.setDone(index);
                             Texture2D tex = Resources.Load<Texture2D>("Controls/itemcomp") as Texture2D;
                             Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 857, 92), new Vector2(0.5f, 0.5f));
-                            Debug.Log(v);
                             list.GetComponentsInChildren<Button>()[v].gameObject.GetComponent<Image>().sprite = sprite;
+                            list.GetComponentsInChildren<Button>()[v].enabled = false;
                             this.gameObject.GetComponent<OverworldController>().updateStats(task.difficulty, task.xp, task.intel, task.health);
+                        } else if (mg.result == 'f') {
+                            StartCoroutine(ui.displayHalf());
+                            ti.setDone(index);
+                            Texture2D tex = Resources.Load<Texture2D>("Controls/itemcomp") as Texture2D;
+                            Sprite sprite = Sprite.Create(tex, new Rect(0, 0, 857, 92), new Vector2(0.5f, 0.5f));
+                            list.GetComponentsInChildren<Button>()[v].gameObject.GetComponent<Image>().sprite = sprite;
+                            list.GetComponentsInChildren<Button>()[v].enabled = false;
+                            this.gameObject.GetComponent<OverworldController>().updateStats(task.difficulty * 0.5f, task.xp, task.intel, task.health);
                         } else {
                             StartCoroutine(ui.displayIncomplete());
                         }

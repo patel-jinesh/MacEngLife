@@ -138,4 +138,10 @@ public class GameController : MonoBehaviour {
             buttonList[i].GetComponentInParent<Button>().interactable = toggle;
         }
     }
+
+    private void Update() {
+        if (Input.GetKey(KeyCode.Escape)) {
+            mg.SetResult('i');
+        }
+    }
 }

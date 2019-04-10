@@ -27,6 +27,10 @@ public class Snake : MonoBehaviour {
 
 
     void Update() {
+        if (Input.GetKey(KeyCode.Escape)) {
+            mg.SetResult('i');
+        }
+
         if (!isDied) {
             // Move in a new Direction
             if (Input.GetKey(KeyCode.RightArrow))

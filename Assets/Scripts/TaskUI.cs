@@ -34,4 +34,11 @@ public class TaskUI : MonoBehaviour {
         yield return new WaitForSeconds(1f); // waits 1 seconds
         i.color = Color.white; // will make the update method pick up 
     }
+
+    public IEnumerator displayHalf() {
+        Image i = this.gameObject.GetComponent<Image>();
+        i.color = Color.yellow;
+        yield return new WaitForSeconds(1f); // waits 1 seconds
+        i.color = Color.white; // will make the update method pick up 
+    }
 }

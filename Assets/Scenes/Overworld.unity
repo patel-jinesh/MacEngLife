@@ -1707,17 +1707,20 @@ MonoBehaviour:
     NAVIGATE WORLD\r\n\r\nUse arrow keys to move player through the overworld. \r\nTo
     enter a building move toward it until Task box opens on screen.\r\nSelect tasks
     to play minigames.\r\nEach task and minigame will update player stats.\r\nContinue
-    to perform tasks to increase stats.\r\n\r\n\r\nMINIGAME INSTRUCTIONS\r\n\r\nTic-Tac-Toe\r\nObjective:
-    Place three Xs in a row on the game board\r\nGameplay: \r\n\t1. To start the game,
-    place your first X by clicking one of the squares on the game board\r\n\t2. Take
-    turns with the CPU choosing squares to place your pieces.\r\n\t3. Once a square
-    is chosen, it can not be chosen by another player.\r\n\t4. Continue to play until
-    there is a row of 3 like characters.\r\n\r\nPong\r\nObjective: Have the pong ball
-    pass the CPU's paddle\r\nGameplay: \r\n\t1. The game will start as soon as the
-    screen opens, the ball will first move from the CPU's paddle.\r\n\t2. Use the
-    up and down arrow keys to move your paddle up and down.\r\n\t3. Prevent the ball
-    from passing your paddle in order to continue the game.\r\n\t4. Continue game
-    play until the ball passes one player's paddle on either side of the board.\r\n\r\nSnake\r\nObjective:
+    to perform tasks to increase stats.\r\n\r\n\r\nMINIGAME INSTRUCTIONS\r\n\r\nTo
+    cancel a minigame: Press ESC, doing so will not get you any points, however you
+    may reattempt the task.\n\nYou get half points if you finish and fail.\nYou get
+    full points if you finish and succeed.\n\nTic-Tac-Toe\r\nObjective: Place three
+    Xs in a row on the game board\r\nGameplay: \r\n\t1. To start the game, place your
+    first X by clicking one of the squares on the game board\r\n\t2. Take turns with
+    the CPU choosing squares to place your pieces.\r\n\t3. Once a square is chosen,
+    it can not be chosen by another player.\r\n\t4. Continue to play until there is
+    a row of 3 like characters.\r\n\r\nPong\r\nObjective: Have the pong ball pass
+    the CPU's paddle\r\nGameplay: \r\n\t1. The game will start as soon as the screen
+    opens, the ball will first move from the CPU's paddle.\r\n\t2. Use the up and
+    down arrow keys to move your paddle up and down.\r\n\t3. Prevent the ball from
+    passing your paddle in order to continue the game.\r\n\t4. Continue game play
+    until the ball passes one player's paddle on either side of the board.\r\n\r\nSnake\r\nObjective:
     Obtain 7 food pieces\r\nGameplay:\r\n\t1. Use the arrow keys to move the snake
     around the board.\r\n\t2. As food spawns, move the snake over it to obtain it.\r\n\t3.
     Avoid walls to continue game play.\r\n\t4. Continue gameplay until objective met.\r\n\r\n\r\nHOW
@@ -4326,7 +4329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

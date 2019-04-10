@@ -19,6 +19,12 @@ public class Ball : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
     }
 
+    private void Update() {
+        if (Input.GetKey(KeyCode.Escape)) {
+            mg.SetResult('i');
+        }
+    }
+
     float hitFactor(Vector2 ballPosition, Vector2 paddlePosition, float paddleY)
     {
         return (ballPosition.y - paddlePosition.y) / paddleY;
