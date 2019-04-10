@@ -35,8 +35,8 @@ public class TaskController : MonoBehaviour {
             GameObject go = Instantiate(tmpltTask) as GameObject;
             go.SetActive(true);
             Text[] t = go.GetComponentsInChildren<Text>();
-            t[0].text = task.name;
-            t[1].text = task.description;
+           t[0].text = task.description;
+            t[1].text = "\nDifficulty : " + task.difficulty.ToString() + ", HP Gain: " + task.health.ToString() + ", INT Gain: " + task.intel.ToString() + ", XP Gain: " + task.xp.ToString();
             go.transform.SetParent(tmpltTask.transform.parent);
             go.GetComponent<Button>().enabled = false;
 
