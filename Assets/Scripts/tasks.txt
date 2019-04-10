@@ -1,5 +1,12 @@
-Task1|study|School|nc|1|3|3|2
-Task2|more study|School|nc|3|3|3|2
-Task3|work|Projects|nc|1|3|3|2
-Task4|work more|Projects|nc|2|3|3|2
-Task5|other|other|nc|3|3|3|2
+Task1|Study|School|nc|1|3|3|2
+Task2|More Study|School|nc|3|3|3|2
+Task3|Do Assignments|Projects|nc|2|3|3|2
+Task4|Slack|Projects|nc|2|-1|-1|-1
+Task5|Hand in Assignment Late|Projects|nc|3|-1|-2|-1
+Task6|Study some more|School|nc|2|3|3|2
+Task7|Cheat on an assignment|Projects|nc|1|-2|0|2
+Task8|Study some More|School|nc|1|3|3|-1
+Task9|Join a Club|Projects|nc|2|3|3|0
+Task10|PARTY|School|nc|2|3|-2|2
+Task11|Sleep In|Projects|nc|1|0|-1|2
+Task12|Ace an Exam|Projects|nc|4|3|4|1
