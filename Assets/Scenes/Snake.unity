@@ -246,7 +246,7 @@ MonoBehaviour:
   isDied: 0
   end: 0
   count: 0
-  tailPrefab: {fileID: 482419850}
+  tailPrefab: {fileID: 101184, guid: 1dc30a498fb414381ab840ed125731f4, type: 3}
 --- !u!1 &682737737
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +877,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 101184, guid: 1dc30a498fb414381ab840ed125731f4, type: 3}
       propertyPath: m_Name
-      value: Tail
+      value: Head
       objectReference: {fileID: 0}
     - target: {fileID: 414926, guid: 1dc30a498fb414381ab840ed125731f4, type: 3}
       propertyPath: m_LocalPosition.x
